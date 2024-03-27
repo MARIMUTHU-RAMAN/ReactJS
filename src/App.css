@@ -1,0 +1,75 @@
+body {
+  background-color: white;
+}
+.App {
+  text-align: center;
+  display: flex;
+  justify-content: space-between;
+  background-color: #122d62;
+  height: 4.4rem;
+  /*background-color: red; !* For browsers that do not support gradients *!*/
+  /* background-image: linear-gradient(to right, red, orange, yellow, green, blue, indigo, violet); */
+}
+
+.container {
+  background-color: #3a65bb !important;
+}
+.App-logo {
+  /*height: 40vmin;*/
+  pointer-events: none;
+}
+
+.image {
+  height: 65px;
+  width: 262px;
+}
+@media (prefers-reduced-motion: no-preference) {
+  .App-logo {
+    animation: App-logo-spin infinite 20s linear;
+  }
+}
+
+.App-header {
+  background-color: #282c34;
+  /*min-height: 5vh;*/
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  padding: 8px;
+  gap: 520px;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+
+.Form-header {
+  /*background-color: #282c34;*/
+  /*min-height: 5vh;*/
+  background-color: #fbda61;
+  display: flex;
+  color: white;
+}
+
+.App-header {
+  background-color: #26074a;
+  /*min-height: 5vh;*/
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  padding: 10px;
+  font-size: calc(8px + 2vmin);
+  color: white;
+}
+
+.Multicolortext {
+  color: #61dafb;
+}
+
+.App-link {
+  color: #61dafb;
+}
+
+.timer {
+  padding-top: 30px;
+  color: #61dafb;
+  font-size: 30px;
+}

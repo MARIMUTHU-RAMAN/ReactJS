@@ -1,0 +1,109 @@
+.tickets-header {
+  background-color: #e7bd40;
+  height: 3rem;
+  display: flex;
+  align-items: center;
+  padding: 1px;
+  color: black;
+  padding-left: 18px;
+  margin-bottom: 10px;
+  /* font-size: medium;
+  margin-bottom: 10px;  */
+}
+
+.ticket-pay-button {
+  padding: 10px;
+  width: 122px;
+  background-color: #2a74de !important;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+.ticket-pay-button:hover {
+  background-color: rgb(77, 216, 221);
+  transform: scale(1.1);
+}
+
+.ticket-receipts-button {
+  width: 120px;
+  padding: 10px;
+  background-color: #daa61a !important;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+.ticket-receipts-button:hover {
+  background-color: #ffce46;
+   transform: scale(1.1);
+}
+
+.custom-card {
+  /* padding: 10px; */
+  /* display: flex; */
+  width: 100%; /* Set the desired card width */
+  border: 1px solid #ccc;
+  /* justify-content: space-between; */
+  box-shadow: 0 2px 4px #fff;
+  /* margin-bottom: 20px; */
+  border-radius: 6px;
+}
+
+.custom-card :hover {
+  background-color: #fdf5e1;
+}
+
+.row {
+  display: flex;
+  justify-content: space-between;
+  margin-right: 30px;
+}
+
+.col {
+  flex: 0 0 calc(12% - 0.5rem);
+  margin: auto;
+}
+
+.tickets-card-icon {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  /* position: absolute;  */
+  /* top: 30%; */
+  /* transform: translate(10px, 125px); */
+  width: 10%;
+  /* padding:20px; */
+  /* padding-left: 35px; */
+}
+.ticket-row-header {
+  font-weight: 500;
+  color: black;
+  margin: 0 10px;
+}
+
+.ticket-row-header-value {
+  width: 100%;
+  font-weight: 700;
+  margin: 0 10px;
+  color: black;
+  padding-top: 6px;
+}
+
+.ticket-chit-id-container {
+  position: relative;
+  pointer-events: none;
+}
+.ticket-chit-id {
+  background-color: #e7bd40;
+  padding: 5px;
+  position: absolute;
+  top: -10px;
+  color: black;
+  font-weight: 700;
+  border-radius: 8px;
+  left: 10px;
+}
+
+.ticket-card-container {
+  background-color: white;
+  padding: 10px;
+}
