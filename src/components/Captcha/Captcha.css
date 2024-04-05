@@ -1,0 +1,16 @@
+.Canvas-header {
+    background-color: rgb(224, 164, 85);
+    min-height: 10vh;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    font-size: calc(10px + 2vmin);
+    gap:20px;
+    color: white;
+}
+canvas {
+    border: 2px solid crimson;
+    border-radius: 20px;
+
+}

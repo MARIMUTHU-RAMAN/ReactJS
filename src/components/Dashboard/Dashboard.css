@@ -1,0 +1,144 @@
+.dashboard-items {
+  display: flex;
+  justify-content: flex-start;
+}
+.dashname {
+  text-align: center;
+}
+
+.dashboard-header {
+  height: 100%;
+  color: #af2929;
+  width: 100%;
+  /* background-color: rgb(27, 19, 9); */
+  display: flex;
+}
+
+.dashboard-items {
+  background-color: black;
+  display: flex;
+  align-items: center;
+  height: 62px;
+  justify-content: flex-start;
+}
+.dashname {
+  text-align: center;
+}
+
+.article-header {
+  display: flex;
+  background-color: rgb(246 175 70);
+  /* text-align: center; */
+  /* align-items: center;    */
+  gap: 10px;
+}
+
+.article-user-icon {
+  color: rgb(125, 36, 173);
+  font-size: 120px;
+  padding-left: 25px;
+}
+
+.article-sub-items {
+  display: block !important;
+}
+.user-details {
+  font-size: 12px;
+}
+.user-sub-items {
+  align-items: center;
+  text-align: center;
+  display: flex;
+}
+
+.dashboard-image {
+  height: 60px;
+  width: 180px;
+}
+
+.user-icon-details {
+  justify-content: flex-end;
+  display: flex;
+  width: 632px;
+  padding: 8px;
+  align-items: center;
+}
+
+.article-user-icon-right {
+  color: rgb(141, 15, 214);
+  padding: 15px;
+  gap: 20px;
+  font-size: 80px;
+  padding-left: 10px;
+}
+
+.card {
+  background-color: #f09712;
+  /* height: 80px; */
+  border-radius: 10px;
+  padding: 16px;
+  width: 55%;
+  color: #fff;
+}
+
+.card-icons {
+  color: rgb(63, 55, 143);
+  font-size: 30px;
+}
+
+.pay-button {
+  border-radius: 7px;
+  padding: 10px;
+  background-color: rgb(44, 101, 167);
+  position: absolute;
+  top: 30px;
+  right: 20px;
+}
+
+.cutomerid-button {
+  background-color: rgb(12, 102, 72);
+  padding: 6px;
+}
+
+.chit-card {
+  border-radius: 0.75rem;
+  padding: 1rem;
+  display: flex;
+  gap: 1rem;
+  position: relative;
+  padding-left: 40px;
+  background-color: #756e6e;
+  width: 70%;
+  color: #fff;
+}
+.chit-card-icons {
+  position: absolute;
+  top: 30px;
+  left: 10px;
+}
+
+.chit-card-customerid {
+  padding-bottom: 10px;
+  gap: 20px;
+}
+
+.chit-items {
+  color: #fff !important;
+  padding-left: 10px;
+}
+
+.user-card-details {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+
+.p-card {
+  background-color: #fff;
+}
+
+.p-menubar {
+  display: flex;
+  align-items: center;
+  width: 48%;
+}
