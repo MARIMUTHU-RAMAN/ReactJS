@@ -1,2 +1,7 @@
-# ReactJS
-Here we can find react projects list
+# Solid JS
+Dynamic Menu Builder App 
+
+
+
+# Thanks and Regards
+R Marimuthu
