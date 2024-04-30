@@ -1,14 +1,16 @@
 
-import { useNavigate} from '@solidjs/router'
+import { useNavigate, useParams} from '@solidjs/router'
+import Login from '@components/';
 
 const App = (props) => {
   const navigator = useNavigate();
+  const parameters = useParams();
 
+  console.log(window.location.href);
 
   return (
     <div class="container">
-      <a onclick={()=> navigator("/login")}>Go To Login</a>
-      <a onclick={()=> navigator("/sidebar")}>Go To Sidebar</a>
+      {  <Login />}
       {props.children}
     </div>
   )
