@@ -1,17 +1,21 @@
 
 import { useNavigate, useParams} from '@solidjs/router'
-import Login from '@components/';
+import Login from './Login/Login';
+import { createSignal, onMount } from 'solid-js';
 
 const App = (props) => {
-  const navigator = useNavigate();
-  const parameters = useParams();
+  const [isLogin,setLogin] = createSignal(false)
 
-  console.log(window.location.href);
+
+  onMount(()=>{
+    localStorage.setItem("authorized","false")
+  })
 
   return (
     <div class="container">
-      {  <Login />}
-      {props.children}
+
+      {isLogin() ?  props.children : <Login setLogin={setLogin} />}
+     
     </div>
   )
 }

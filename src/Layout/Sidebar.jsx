@@ -1,4 +1,4 @@
-import "../Login/Login.css"
+import "../index.css"
 
 function Sidebar() {
   return (

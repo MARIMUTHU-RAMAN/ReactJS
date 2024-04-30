@@ -3,6 +3,7 @@ import { render } from 'solid-js/web'
 import App from './App'
 import { Route, Router } from '@solidjs/router'
 
+import Login from './Login/Login'
 import Sidebar from './Layout/Sidebar'
 
 

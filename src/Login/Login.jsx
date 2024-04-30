@@ -1,10 +1,11 @@
 import { useNavigate } from "@solidjs/router";
-import "./Login.css";
+import "../index.css";
 
-function Login() {
+function Login(props) {
   const navigate = useNavigate();
 
   const redirectSidebar = () => {
+    props.setLogin(true)
     navigate("/sidebar");
   };
 
