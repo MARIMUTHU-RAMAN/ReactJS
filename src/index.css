@@ -6,23 +6,223 @@
 
 body {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 
 code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
-} 
-
+  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New", monospace;
+}
 
 /* Components Css Start*/
 
+/* NTSButton Start*/
 
-/* Components Css End */
+.nts-button {
+  font-size: 0.7rem !important;
+  @apply justify-center px-4 h-8 border border-gray-300 font-medium focus:outline-none rounded-md;
+}
+
+.nts-button-success {
+  @apply nts-button;
+  background-color: #28a745;
+  color: white;
+}
+
+.nts-button-danger {
+  @apply nts-button;
+  background-color: #dc3545;
+  color: white;
+}
+
+.nts-button-warning {
+  @apply nts-button;
+  background-color: #ffc107;
+  color: black;
+}
+
+.nts-button-light {
+  @apply nts-button;
+  background-color: #f8f8f8;
+  color: #848488;
+}
+
+.nts-button-dark {
+  @apply nts-button;
+  background-color: #1c1c1c;
+  color: white;
+}
+
+.nts-button-link {
+  @apply nts-button;
+  color: #1d74ff;
+  border: none;
+}
+
+.nts-button-primary {
+  @apply nts-button;
+  background-color: #1d74ff;
+  color: white;
+}
+.nts-button-gray {
+  @apply nts-button;
+  background-color: #e7e7e7 !important;
+  color: black !important;
+  padding: 10px !important;
+}
+/* NTSButton End*/
+
+/* NTSCard Start*/
+.card {
+  @apply max-w-sm rounded overflow-hidden shadow-[0px_4px_16px_rgba(17,17,26,0.1),_0px_8px_24px_rgba(17,17,26,0.1),_0px_16px_56px_rgba(17,17,26,0.1)] p-2;
+}
+.card-image {
+  @apply w-full;
+}
+.card-content {
+  @apply px-6 py-4;
+}
+.card-title {
+  @apply font-bold text-xl mb-2;
+}
+.card-description {
+  @apply text-gray-700 text-base;
+}
+
+/* NTSCard End*/
+
+/* NTSCheckbox Start*/
+
+.nts-checkbox-style {
+  @apply w-4 h-4 text-blue-600 bg-gray-100 rounded border-gray-300 focus:ring-blue-500 dark:focus:ring-blue-600 dark:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600;
+}
+/* NTSCheckbox End*/
+
+/* NTSLink Start*/
+
+.nts-link-style {
+  @apply text-blue-500 hover:text-blue-700;
+}
+
+/* NTSLink End*/
+
+/* NTSRadio Start */
+
+.nts-radio-style {
+  @apply border-gray-300  shadow-sm focus:border-blue-500 focus:ring-0;
+}
+/* NTSRadio End */
+
+/* NTSSelectfield Start */
+
+.nts-selectfield-style {
+  @apply mt-0 focus:ring-0 block w-96 h-9 shadow-sm border border-gray-300 rounded-md text-xs focus:font-medium focus:text-black p-0 pl-3;
+}
+
+/* NTSSelectfield End */
+
+/* NTSMultiSelectField Start */
+.nts-multiselect-option-container {
+  @apply absolute z-10 mt-2 w-64 rounded-md shadow-lg bg-white ring-1 ring-black ring-opacity-5;
+}
+
+.nts-multiselect-container {
+  @apply relative inline-block text-left;
+}
+.nts-selectfield-width {
+  @apply w-64;
+}
+.nts-multiselect-toggle {
+  @apply inline-flex justify-between rounded-md border border-gray-300 shadow-sm px-4 py-2 bg-white text-sm font-medium text-gray-700 hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2 items-center;
+}
+.nts-toggle-section {
+  @apply flex flex-wrap items-center;
+}
+
+.nts-selected-options {
+  @apply flex items-center bg-gray-200 rounded-full px-2 py-1 mr-1 mt-1;
+}
+
+.nts-multiselect-search {
+  @apply w-full rounded-md focus:outline-none;
+}
+.nts-multiselect-checkbox {
+  @apply h-4 w-4 text-blue-600;
+}
+.nts-selected-multiselect-container {
+  @apply flex items-center px-4 py-2;
+}
+/* NTSMultiSelectField End */
+
+/* NTSTextbox Start */
+.nts-textbox {
+  @apply mt-0 focus:ring-0 block w-96 h-9 shadow-sm border border-gray-300 rounded placeholder:text-gray-400 placeholder:text-xs text-xs focus:font-medium focus:text-black;
+}
+
+.nts-multiline-textbox{
+  @apply mt-0 focus:ring-0 block w-96 h-20 sm:resize-y resize-y shadow-sm sm:text-sm border border-gray-300 rounded-md text-sm placeholder:text-gray-400 placeholder:text-xs
+}
+
+/* NTSTextbox End */
+
+/* NTSToggle Start*/
+
+.nts-toggle-container{
+  @apply relative inline-block w-10 mr-8 align-middle select-none transition duration-200 ease-in
+}
+
+.toggler-wrapper {
+  display: block;
+  width: 45px;
+  height: 25px;
+  cursor: pointer;
+  position: relative;
+}
+
+.toggler-wrapper input[type="checkbox"] {
+  display: none;
+}
+
+.toggler-wrapper input[type="checkbox"]:checked+.toggler-slider {
+  background-color: #2196F3;
+}
+
+.toggler-wrapper .toggler-slider {
+  background-color: #ccc;
+  position: absolute;
+  border-radius: 100px;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  -webkit-transition: all 300ms ease;
+  transition: all 300ms ease;
+}
+
+.toggler-wrapper .toggler-knob {
+  position: absolute;
+  -webkit-transition: all 300ms ease;
+  transition: all 300ms ease;
+}
+
+.toggler-wrapper.style-1 input[type="checkbox"]:checked+.toggler-slider .toggler-knob {
+  left: calc(100% - 19px - 3px);
+}
+
+.toggler-wrapper.style-1 .toggler-knob {
+  width: calc(25px - 6px);
+  height: calc(25px - 6px);
+  border-radius: 50%;
+  left: 3px;
+  top: 3px;
+  background-color: #fff;
+}
+/* NTSToggle End */
+
+/* -----------------Components Css End -----------------------------*/
+
+
 
 
 
@@ -63,7 +263,23 @@ code {
 * {
   @apply box-border m-0 p-0;
   font-family: "Poppins", sans-serif;
-} body, div, nav, article, section, main, header, footer, input, form, table, fieldset, textarea, ul, li, span {
+}
+body,
+div,
+nav,
+article,
+section,
+main,
+header,
+footer,
+input,
+form,
+table,
+fieldset,
+textarea,
+ul,
+li,
+span {
   @apply box-border;
 }
 header {

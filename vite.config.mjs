@@ -16,5 +16,11 @@ export default defineConfig({
   },
   build: {
     target: 'esnext',
-  }
+  },
+  resolve: {
+    alias: {
+      '@source': '/src/',
+      '@components': '/src/components',
+    },
+  },
 });

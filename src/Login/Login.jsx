@@ -38,7 +38,7 @@ function Login(props) {
                               </div>
                             </div>
                             <div class="credit-field2">
-                              <input type="email" placeholder="nicetoseeyou@email.com" id="2" name="username" class="form-control-input" value="" />
+                              <input type="email" placeholder="Username" id="2" name="username" class="form-control-input" value="" />
                             </div>
                           </div>
                           <div class="login-form__field e1xd6ynf1" orientation="vertical">
@@ -50,7 +50,7 @@ function Login(props) {
                               </div>
                             </div>
                             <div class="credit-field2 ">
-                              <input type="password" placeholder="Shhh..." id="3" name="password" class="form-control-input " value="" />
+                              <input type="password" placeholder="Password" id="3" name="password" class="form-control-input " value="" />
                             </div>
                           </div>
                           <div class="remember-css" orientation="horizontal">

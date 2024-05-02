@@ -1,5 +1,5 @@
 
-import { useNavigate, useParams} from '@solidjs/router'
+import ComponentsList from './ComponentsList';
 import Login from './Login/Login';
 import { createSignal, onMount } from 'solid-js';
 
@@ -14,8 +14,8 @@ const App = (props) => {
   return (
     <div class="container">
 
-      {isLogin() ?  props.children : <Login setLogin={setLogin} />}
-     
+      {/* {isLogin() ?  props.children : <Login setLogin={setLogin} />} */}
+      <ComponentsList />
     </div>
   )
 }
