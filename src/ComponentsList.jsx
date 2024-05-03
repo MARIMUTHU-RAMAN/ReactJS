@@ -48,227 +48,53 @@ const ComponentsList = (props) => {
 
 //Grid table
 
-const data = [
-  { id: 1, name: "John Doe", age: 30, email: "john@example.com" },
-  { id: 2, name: "Jane Smith", age: 25, email: "jane@example.com" },
-  { id: 3, name: "Alice Johnson", age: 35, email: "alice@example.com" },
-  { id: 4, name: "Bob Brown", age: 40, email: "bob@example.com" },
-  { id: 5, name: "Eve White", age: 28, email: "eve@example.com" },
-  { id: 6, name: "Michael Jordan", age: 45, email: "michael@example.com" },
-  { id: 7, name: "Maria Garcia", age: 32, email: "maria@example.com" },
-  { id: 3, name: "Alice Johnson", age: 35, email: "alice@example.com" },
-  { id: 4, name: "Bob Brown", age: 40, email: "bob@example.com" },
-  { id: 5, name: "Eve White", age: 28, email: "eve@example.com" },
 
-  { id: 3, name: "Alice Johnson", age: 35, email: "alice@example.com" },
-  { id: 4, name: "Bob Brown", age: 40, email: "bob@example.com" },
-  { id: 5, name: "Eve White", age: 28, email: "eve@example.com" },
-  { id: 3, name: "Alice Johnson", age: 35, email: "alice@example.com" },
-  { id: 4, name: "Bob Brown", age: 40, email: "bob@example.com" },
-  { id: 5, name: "Eve White", age: 28, email: "eve@example.com" },
+function makeid(length) {
+    let result = '';
+    const characters = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789';
+    const charactersLength = characters.length;
+    let counter = 0;
+    while (counter < length) {
+      result += characters.charAt(Math.floor(Math.random() * charactersLength));
+      counter += 1;
+    }
+    return result;
+}
 
-  { id: 3, name: "Alice Johnson", age: 35, email: "alice@example.com" },
-  { id: 4, name: "Bob Brown", age: 40, email: "bob@example.com" },
-  { id: 5, name: "Eve White", age: 28, email: "eve@example.com" },
+const generateRandomData = (count) => {
+  const data = [];
+  for (let i = 1; i <= count; i++) {
+    const randomName = getRandomName();
+    const randomAge = getRandomAge();
+    const randomCity = getRandomCity();
+    const lastName = getLastname();
+    data.push({ id: i, name: randomName, age: randomAge, city: randomCity, lastName :lastName });
+  }
+  return data;
+};
 
-  { id: 3, name: "Alice Johnson", age: 35, email: "alice@example.com" },
-  { id: 4, name: "Bob Brown", age: 40, email: "bob@example.com" },
-  { id: 5, name: "Eve White", age: 28, email: "eve@example.com" },
+const getRandomName = () => {
+  const names = ["John", "Alice", "Bob", "Emma", "Michael", "Sophia", "William", "Olivia", "James", "Amelia"];
+  return names[Math.floor(Math.random() * names.length)];
+};
 
-  { id: 3, name: "Alice Johnson", age: 35, email: "alice@example.com" },
-  { id: 4, name: "Bob Brown", age: 40, email: "bob@example.com" },
-  { id: 5, name: "Eve White", age: 28, email: "eve@example.com" },
-  { id: 3, name: "Alice Johnson", age: 35, email: "alice@example.com" },
-  { id: 4, name: "Bob Brown", age: 40, email: "bob@example.com" },
-  { id: 5, name: "Eve White", age: 28, email: "eve@example.com" },
+const getRandomAge = () => {
+  return Math.floor(Math.random() * 50) + 20; // Random age between 20 and 70
+};
 
-  { id: 3, name: "Alice Johnson", age: 35, email: "alice@example.com" },
-  { id: 4, name: "Bob Brown", age: 40, email: "bob@example.com" },
-  { id: 5, name: "Eve White", age: 28, email: "eve@example.com" },
-  { id: 3, name: "Alice Johnson", age: 35, email: "alice@example.com" },
-  { id: 4, name: "Bob Brown", age: 40, email: "bob@example.com" },
-  { id: 5, name: "Eve White", age: 28, email: "eve@example.com" },
-  { id: 3, name: "Alice Johnson", age: 35, email: "alice@example.com" },
-  { id: 4, name: "Bob Brown", age: 40, email: "bob@example.com" },
-  { id: 5, name: "Eve White", age: 28, email: "eve@example.com" },
-  { id: 3, name: "Alice Johnson", age: 35, email: "alice@example.com" },
-  { id: 4, name: "Bob Brown", age: 40, email: "bob@example.com" },
-  { id: 5, name: "Eve White", age: 28, email: "eve@example.com" },
+const getRandomCity = () => {
+  const cities = ["New York", "Los Angeles", "Chicago", "Houston", "Phoenix", "Philadelphia", "San Antonio", "San Diego", "Dallas", "San Jose"];
+  return cities[Math.floor(Math.random() * cities.length)];
+};
 
-  { id: 3, name: "Alice Johnson", age: 35, email: "alice@example.com" },
-  { id: 4, name: "Bob Brown", age: 40, email: "bob@example.com" },
-  { id: 5, name: "Eve White", age: 28, email: "eve@example.com" },
-  { id: 3, name: "Alice Johnson", age: 35, email: "alice@example.com" },
-  { id: 4, name: "Bob Brown", age: 40, email: "bob@example.com" },
-  { id: 5, name: "Eve White", age: 28, email: "eve@example.com" },
+const getLastname = () => {
+  const cities = ["sdsdsdsdNew York", "Losfdf Angeles", "Chicdfdfago", "Hdfdouston", "Phdfoenix", "Phildfadelphia", "Sadfn Antonio", "San dfDiego", "Dalldfas", "df Jose"];
+  return cities[Math.floor(Math.random() * cities.length)];
+};
 
-  { id: 3, name: "Alice Johnson", age: 35, email: "alice@example.com" },
-  { id: 4, name: "Bob Brown", age: 40, email: "bob@example.com" },
-  { id: 5, name: "Eve White", age: 28, email: "eve@example.com" },
-  { id: 3, name: "Alice Johnson", age: 35, email: "alice@example.com" },
-  { id: 4, name: "Bob Brown", age: 40, email: "bob@example.com" },
-  { id: 5, name: "Eve White", age: 28, email: "eve@example.com" },
+const data = generateRandomData(100);
 
-  { id: 3, name: "Alice Johnson", age: 35, email: "alice@example.com" },
-  { id: 4, name: "Bob Brown", age: 40, email: "bob@example.com" },
-  { id: 5, name: "Eve White", age: 28, email: "eve@example.com" },
-  { id: 3, name: "Alice Johnson", age: 35, email: "alice@example.com" },
-  { id: 4, name: "Bob Brown", age: 40, email: "bob@example.com" },
-  { id: 5, name: "Eve White", age: 28, email: "eve@example.com" },
-  { id: 3, name: "Alice Johnson", age: 35, email: "alice@example.com" },
-  { id: 4, name: "Bob Brown", age: 40, email: "bob@example.com" },
-  { id: 5, name: "Eve White", age: 28, email: "eve@example.com" },
-  { id: 3, name: "Alice Johnson", age: 35, email: "alice@example.com" },
-  { id: 4, name: "Bob Brown", age: 40, email: "bob@example.com" },
-  { id: 5, name: "Eve White", age: 28, email: "eve@example.com" },
-
-  { id: 3, name: "Alice Johnson", age: 35, email: "alice@example.com" },
-  { id: 4, name: "Bob Brown", age: 40, email: "bob@example.com" },
-  { id: 5, name: "Eve White", age: 28, email: "eve@example.com" },
-  { id: 3, name: "Alice Johnson", age: 35, email: "alice@example.com" },
-  { id: 4, name: "Bob Brown", age: 40, email: "bob@example.com" },
-  { id: 5, name: "Eve White", age: 28, email: "eve@example.com" },
-
-  { id: 3, name: "Alice Johnson", age: 35, email: "alice@example.com" },
-  { id: 4, name: "Bob Brown", age: 40, email: "bob@example.com" },
-  { id: 5, name: "Eve White", age: 28, email: "eve@example.com" },
-  { id: 3, name: "Alice Johnson", age: 35, email: "alice@example.com" },
-  { id: 4, name: "Bob Brown", age: 40, email: "bob@example.com" },
-  { id: 5, name: "Eve White", age: 28, email: "eve@example.com" },
-
-  { id: 3, name: "Alice Johnson", age: 35, email: "alice@example.com" },
-  { id: 4, name: "Bob Brown", age: 40, email: "bob@example.com" },
-  { id: 5, name: "Eve White", age: 28, email: "eve@example.com" },
-  { id: 3, name: "Alice Johnson", age: 35, email: "alice@example.com" },
-  { id: 4, name: "Bob Brown", age: 40, email: "bob@example.com" },
-  { id: 5, name: "Eve White", age: 28, email: "eve@example.com" },
-  { id: 3, name: "Alice Johnson", age: 35, email: "alice@example.com" },
-  { id: 4, name: "Bob Brown", age: 40, email: "bob@example.com" },
-  { id: 5, name: "Eve White", age: 28, email: "eve@example.com" },
-  { id: 3, name: "Alice Johnson", age: 35, email: "alice@example.com" },
-  { id: 4, name: "Bob Brown", age: 40, email: "bob@example.com" },
-  { id: 5, name: "Eve White", age: 28, email: "eve@example.com" },
-
-  { id: 3, name: "Alice Johnson", age: 35, email: "alice@example.com" },
-  { id: 4, name: "Bob Brown", age: 40, email: "bob@example.com" },
-  { id: 5, name: "Eve White", age: 28, email: "eve@example.com" },
-  { id: 3, name: "Alice Johnson", age: 35, email: "alice@example.com" },
-  { id: 4, name: "Bob Brown", age: 40, email: "bob@example.com" },
-  { id: 5, name: "Eve White", age: 28, email: "eve@example.com" },
-
-  { id: 3, name: "Alice Johnson", age: 35, email: "alice@example.com" },
-  { id: 4, name: "Bob Brown", age: 40, email: "bob@example.com" },
-  { id: 5, name: "Eve White", age: 28, email: "eve@example.com" },
-  { id: 3, name: "Alice Johnson", age: 35, email: "alice@example.com" },
-  { id: 4, name: "Bob Brown", age: 40, email: "bob@example.com" },
-  { id: 5, name: "Eve White", age: 28, email: "eve@example.com" },
-
-  { id: 3, name: "Alice Johnson", age: 35, email: "alice@example.com" },
-  { id: 4, name: "Bob Brown", age: 40, email: "bob@example.com" },
-  { id: 5, name: "Eve White", age: 28, email: "eve@example.com" },
-  { id: 3, name: "Alice Johnson", age: 35, email: "alice@example.com" },
-  { id: 4, name: "Bob Brown", age: 40, email: "bob@example.com" },
-  { id: 5, name: "Eve White", age: 28, email: "eve@example.com" },
-  { id: 3, name: "Alice Johnson", age: 35, email: "alice@example.com" },
-  { id: 4, name: "Bob Brown", age: 40, email: "bob@example.com" },
-  { id: 5, name: "Eve White", age: 28, email: "eve@example.com" },
-  { id: 3, name: "Alice Johnson", age: 35, email: "alice@example.com" },
-  { id: 4, name: "Bob Brown", age: 40, email: "bob@example.com" },
-  { id: 5, name: "Eve White", age: 28, email: "eve@example.com" },
-
-  { id: 3, name: "Alice Johnson", age: 35, email: "alice@example.com" },
-  { id: 4, name: "Bob Brown", age: 40, email: "bob@example.com" },
-  { id: 5, name: "Eve White", age: 28, email: "eve@example.com" },
-  { id: 3, name: "Alice Johnson", age: 35, email: "alice@example.com" },
-  { id: 4, name: "Bob Brown", age: 40, email: "bob@example.com" },
-  { id: 5, name: "Eve White", age: 28, email: "eve@example.com" },
-
-
-  { id: 3, name: "Alice Johnson", age: 35, email: "alice@example.com" },
-  { id: 4, name: "Bob Brown", age: 40, email: "bob@example.com" },
-  { id: 5, name: "Eve White", age: 28, email: "eve@example.com" },
-  { id: 3, name: "Alice Johnson", age: 35, email: "alice@example.com" },
-  { id: 4, name: "Bob Brown", age: 40, email: "bob@example.com" },
-  { id: 5, name: "Eve White", age: 28, email: "eve@example.com" },
-
-  { id: 3, name: "Alice Johnson", age: 35, email: "alice@example.com" },
-  { id: 4, name: "Bob Brown", age: 40, email: "bob@example.com" },
-  { id: 5, name: "Eve White", age: 28, email: "eve@example.com" },
-  { id: 3, name: "Alice Johnson", age: 35, email: "alice@example.com" },
-  { id: 4, name: "Bob Brown", age: 40, email: "bob@example.com" },
-  { id: 5, name: "Eve White", age: 28, email: "eve@example.com" },
-  { id: 3, name: "Alice Johnson", age: 35, email: "alice@example.com" },
-  { id: 4, name: "Bob Brown", age: 40, email: "bob@example.com" },
-  { id: 5, name: "Eve White", age: 28, email: "eve@example.com" },
-  { id: 3, name: "Alice Johnson", age: 35, email: "alice@example.com" },
-  { id: 4, name: "Bob Brown", age: 40, email: "bob@example.com" },
-  { id: 5, name: "Eve White", age: 28, email: "eve@example.com" },
-
-  { id: 3, name: "Alice Johnson", age: 35, email: "alice@example.com" },
-  { id: 4, name: "Bob Brown", age: 40, email: "bob@example.com" },
-  { id: 5, name: "Eve White", age: 28, email: "eve@example.com" },
-  { id: 3, name: "Alice Johnson", age: 35, email: "alice@example.com" },
-  { id: 4, name: "Bob Brown", age: 40, email: "bob@example.com" },
-  { id: 5, name: "Eve White", age: 28, email: "eve@example.com" },
-
-  { id: 3, name: "Alice Johnson", age: 35, email: "alice@example.com" },
-  { id: 4, name: "Bob Brown", age: 40, email: "bob@example.com" },
-  { id: 5, name: "Eve White", age: 28, email: "eve@example.com" },
-  { id: 3, name: "Alice Johnson", age: 35, email: "alice@example.com" },
-  { id: 4, name: "Bob Brown", age: 40, email: "bob@example.com" },
-  { id: 5, name: "Eve White", age: 28, email: "eve@example.com" },
-
-  { id: 3, name: "Alice Johnson", age: 35, email: "alice@example.com" },
-  { id: 4, name: "Bob Brown", age: 40, email: "bob@example.com" },
-  { id: 5, name: "Eve White", age: 28, email: "eve@example.com" },
-  { id: 3, name: "Alice Johnson", age: 35, email: "alice@example.com" },
-  { id: 4, name: "Bob Brown", age: 40, email: "bob@example.com" },
-  { id: 5, name: "Eve White", age: 28, email: "eve@example.com" },
-  { id: 3, name: "Alice Johnson", age: 35, email: "alice@example.com" },
-  { id: 4, name: "Bob Brown", age: 40, email: "bob@example.com" },
-  { id: 5, name: "Eve White", age: 28, email: "eve@example.com" },
-  { id: 3, name: "Alice Johnson", age: 35, email: "alice@example.com" },
-  { id: 4, name: "Bob Brown", age: 40, email: "bob@example.com" },
-  { id: 5, name: "Eve White", age: 28, email: "eve@example.com" },
-
-  { id: 3, name: "Alice Johnson", age: 35, email: "alice@example.com" },
-  { id: 4, name: "Bob Brown", age: 40, email: "bob@example.com" },
-  { id: 5, name: "Eve White", age: 28, email: "eve@example.com" },
-  { id: 3, name: "Alice Johnson", age: 35, email: "alice@example.com" },
-  { id: 4, name: "Bob Brown", age: 40, email: "bob@example.com" },
-  { id: 5, name: "Eve White", age: 28, email: "eve@example.com" },
-  { id: 3, name: "Alice Johnson", age: 35, email: "alice@example.com" },
-  { id: 4, name: "Bob Brown", age: 40, email: "bob@example.com" },
-  { id: 5, name: "Eve White", age: 28, email: "eve@example.com" },
-  { id: 3, name: "Alice Johnson", age: 35, email: "alice@example.com" },
-  { id: 4, name: "Bob Brown", age: 40, email: "bob@example.com" },
-  { id: 5, name: "Eve White", age: 28, email: "eve@example.com" },
-
-  { id: 3, name: "Alice Johnson", age: 35, email: "alice@example.com" },
-  { id: 4, name: "Bob Brown", age: 40, email: "bob@example.com" },
-  { id: 5, name: "Eve White", age: 28, email: "eve@example.com" },
-  { id: 3, name: "Alice Johnson", age: 35, email: "alice@example.com" },
-  { id: 4, name: "Bob Brown", age: 40, email: "bob@example.com" },
-  { id: 5, name: "Eve White", age: 28, email: "eve@example.com" },
-  { id: 3, name: "Alice Johnson", age: 35, email: "alice@example.com" },
-  { id: 4, name: "Bob Brown", age: 40, email: "bob@example.com" },
-  { id: 5, name: "Eve White", age: 28, email: "eve@example.com" },
-  { id: 3, name: "Alice Johnson", age: 35, email: "alice@example.com" },
-  { id: 4, name: "Bob Brown", age: 40, email: "bob@example.com" },
-  { id: 5, name: "Eve White", age: 28, email: "eve@example.com" },
-
-  { id: 3, name: "Alice Johnson", age: 35, email: "alice@example.com" },
-  { id: 4, name: "Bob Brown", age: 40, email: "bob@example.com" },
-  { id: 5, name: "Eve White", age: 28, email: "eve@example.com" },
-  { id: 3, name: "Alice Johnson", age: 35, email: "alice@example.com" },
-  { id: 4, name: "Bob Brown", age: 40, email: "bob@example.com" },
-  { id: 5, name: "Eve White", age: 28, email: "eve@example.com" },
-
-
-
-  // Add more data as needed
-];
-const columns = ["id", "name", "email"];
+const columns = ["id", "name", "age", "city","lastName"];
 
   const components = [
     {
@@ -355,7 +181,11 @@ const columns = ["id", "name", "email"];
         </>
       ),
     },
-    { componentName: "Grid Table", component: <NTSGridTable data={data} columns={columns} /> },
+    { componentName: "Grid Table", component: <NTSGridTable data={data} columns={columns} 
+    sortColumn={true} 
+    searchposition={'end'}
+    // paginationposition={""}
+    /> },
   ];
 
   return (
@@ -363,8 +193,8 @@ const columns = ["id", "name", "email"];
       <h1 class="text-2xl text-center italic font-bold text-blue-500">NTS Components List</h1>
       <div class="grid grid-cols-2 gap-4">
         <For each={components}>{(component) => (
-            <div class="border p-4">
-            <h2 class="text-xl font-bold text-blue-500 m-2">{component.componentName}</h2>
+            <div class="border p-4 ">
+            <h2 class="text-xl font-bold text-blue-500  m-2">{component.componentName}</h2>
             {component.component}
           </div>
           )
